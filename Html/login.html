@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Css/init.css">
+    <link rel="stylesheet" href="../Css/login.css">
+    <script src="../node_modules/vue/dist/vue.min.js"></script>
+    <script src="../Other/user.js"></script>
+</head>
+<body>
+    <div id="login">
+        <div class="model">
+            <div class="head">
+                <p>网站登录</p>
+            </div>
+            <div class="content">
+                <p>
+                    <label for="user">账号</label>
+                    <input id="user" type="text"  placeholder="请输入账号" v-model="user">
+                </p>
+                <p>
+                    <label for="password">密码</label>
+                    <input type="password" id="password" placeholder="请输入密码" v-model="password">
+                </p>
+                <p v-show="flag" class="alter">请输入账号密码!</p>
+                <p v-show="flagP" class="alter">密码不正确!</p>
+            </div>
+            <div class="foot">
+                <div class="login-btn">
+                    <button @click="login">登录</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/login.js"></script>
+</body>
+</html>

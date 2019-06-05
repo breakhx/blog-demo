@@ -1,0 +1,67 @@
+
+#app {
+    width: 100%;
+    height: 60px;
+    border-bottom: 2px solid #ddd;
+    box-sizing: border-box
+}
+.content {
+    width: 1200px;
+    margin: 0 auto;
+}
+.content .head {
+    width: 100%;
+    height: 60px;
+}
+/* 导航条 */
+.content .head nav {
+    width: 100%;
+    height: 60px;
+}
+.content .head nav>ul {
+    height: 100%;
+}
+.content .head nav ul li.t-item {
+    float: left;
+    width: 150px;
+    height: 100%;
+    font-size: 18px;
+    text-align: center;
+    line-height: 60px;
+    list-style: none;
+    transition: all 2s;
+    position: relative;
+}
+.content .head nav ul li.t-item>a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: #409EFF;
+    box-sizing: border-box
+}
+.content .head nav ul li.t-item>a:hover {
+    border-bottom: 2px solid #42b983
+}
+/* 下拉部分 */
+/* height部分 len*60 */
+.content .head nav ul li .list {
+    width: 150px;
+    box-sizing: border-box;
+    position: absolute;
+    z-index:9999;
+    /* height: 120px; */
+    height:0px;
+    overflow: hidden;
+    transition: height 2s;
+}
+.content .head nav .list li.item {
+    list-style: none;
+    width: 100%;
+    height:60px;
+    text-align: center;
+    display:inline-block
+}
+/* 有下拉框的 */
+.content .head nav .parent:hover .list {
+    height: 120px;
+}
