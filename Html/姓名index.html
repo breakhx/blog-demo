@@ -15,50 +15,58 @@
         <div class="content">
             <div class="head">
                 <nav>
-                    <ul>
+                    <!-- 这里使用span替代a标签 js在index.js -->
+                    <ul @click="handleClick($event)">
+                        <li class="t-item">
+                            <span to="./sound.html">首页</span>
+                        </li>
                         <li class="t-item parent">
-                            <a href="">我的昨天</a>
+                            <span>我的昨天</span>
                             <ul class="list">
                                 <li class="item">
-                                    <a href="">我的啥啥</a>
+                                    <span>我的啥啥</span>
                                 </li>
                                 <li class="item">
-                                    <a href="">我的啥啥</a>
+                                    <span to="./item.html">我的啥啥</span>
                                 </li>
                             </ul>
                         </li>
                         <li class="t-item parent">
-                            <a href="">我的今天</a>
+                            <span>我的今天</span>
                             <ul class="list">
                                 <li class="item">
-                                    <a href="">我的啥啥</a>
+                                    <span>我的啥啥</span>
                                 </li>
                                 <li class="item">
-                                    <a href="">我的啥啥</a>
+                                    <span>我的啥啥</span>
                                 </li>
                             </ul>
                         </li>
                         <li class="t-item">
-                            <a href="">我的爱好</a>
+                            <span>我的爱好</span>
                         </li>
                         <li class="t-item parent">
-                            <a href="">我的明天</a>
+                            <span>我的明天</span>
                             <ul class="list">
                                 <li class="item">
-                                    <a href="">我的啥啥</a>
+                                    <span>我的啥啥</span>
                                 </li>
                                 <li class="item">
-                                    <a href="">我的啥啥</a>
+                                    <span>我的啥啥</span>
                                 </li>
                             </ul>
                         </li class="t-item">
                         <li class="t-item">
-                            <a href="">站点设计实验报告</a>
+                            <span>站点设计实验报告</span>
                         </li>
                     </ul>
                 </nav>
             </div>
-            <div class="midd"></div>
+            <div class="midd" style="overflow: hidden">
+                <iframe :src="src" frameborder="0" scrolling="yes" >
+
+                </iframe>
+            </div>
             <div class="footer"></div>
         </div>
     </div>

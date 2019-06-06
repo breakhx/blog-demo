@@ -6,3 +6,10 @@ a {
     text-decoration: none;
     color: #000
 }
+::-webkit-scrollbar {
+    height: 20px;
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgb(160, 207, 255)
+}

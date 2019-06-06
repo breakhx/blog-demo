@@ -8,6 +8,8 @@
 .content {
     width: 1200px;
     margin: 0 auto;
+    height: 100vh;
+    overflow: hidden
 }
 .content .head {
     width: 100%;
@@ -32,14 +34,14 @@
     transition: all 2s;
     position: relative;
 }
-.content .head nav ul li.t-item>a {
+.content .head nav ul li.t-item>span {
     display: inline-block;
     width: 100%;
     height: 100%;
     color: #409EFF;
     box-sizing: border-box
 }
-.content .head nav ul li.t-item>a:hover {
+.content .head nav ul li.t-item>span:hover {
     border-bottom: 2px solid #42b983
 }
 /* 下拉部分 */
@@ -52,16 +54,50 @@
     /* height: 120px; */
     height:0px;
     overflow: hidden;
-    transition: height 2s;
+    transition: height 1s;
 }
 .content .head nav .list li.item {
     list-style: none;
     width: 100%;
     height:60px;
     text-align: center;
-    display:inline-block
+    display:inline-block;
+    background-color:#eee;
+    opacity:0.7;
+    /* border: 1px solid black; */
+    box-sizing:border-box;
+    border-color: #42b983;
+    transition: opacity 1s;
+}
+.content .head nav .list li.item:hover {
+    opacity: 1;
+    border-bottom:2px solid #42b983
 }
 /* 有下拉框的 */
 .content .head nav .parent:hover .list {
-    height: 120px;
+    height: 122px;
+}
+/* iframe */
+.content .midd {
+    height: 100%;
+    width: 100%;
+    /* border: 1px solid black; */
+    box-sizing: border-box;
+    height: 100vh;
+    margin-top: -60px;
+    padding-top: 60px;
+    overflow-y:hidden;
+    display:inline-block
+}
+.content .midd iframe {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow-x: hidden
+}
+
+.content .midd iframe::-webkit-scrollbar {
+    height: 5px;
+    width: 1px;
 }
